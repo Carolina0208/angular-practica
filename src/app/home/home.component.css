@@ -1,3 +1,57 @@
+footer {
+    background-color: #52489C;
+    padding: 30px;
+    font-size: 14px;
+  }
+  
+  .columna1 {
+    width: 50%;
+    float: left;
+    text-align: left;
+
+  }
+  
+  .columna2 {
+    width: 50%;
+    float: right;
+    text-align: right;
+
+  }
+  
+  .redes-sociales {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .redes-sociales a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #0D160B;
+  }
+  
+  .tit-pie {
+    font-size: 25px;
+    font-weight: bold;    
+  }
+  
+  /* Estilos responsive */
+  @media (max-width: 767px) {
+    footer {
+      display: block;
+    }
+  
+    .columna1,
+    .columna2 {
+      width: 100%;
+    }
+  
+    .redes-sociales {
+      margin-top: 0;
+    }
+  }
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -73,3 +127,4 @@ body{
     color: rgb(67, 61, 82);
     transform: scale(1.1);
 }
+
