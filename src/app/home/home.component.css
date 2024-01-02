@@ -11,7 +11,7 @@ body{
 }
 
 .header{
-    background-color: rgb(31, 14, 73);
+    background-color: #52489C;;
     display: flex;
     justify-content: space-between;
     align-self: center;
