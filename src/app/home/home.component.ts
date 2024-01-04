@@ -1,8 +1,55 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { PokemonServiceService } from '../service/pokemon-service.service';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {}
+export class HomeComponent {
+  
+  lst!: MatTableDataSource<any>;
+  public columnas: string[] = [ 'position', 'name', 'image'];
+  data:any[]=[]
+  @ViewChild('MatPaginator') paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+constructor(public servicepokemon: PokemonServiceService) {
+  this.getpokemon();
+}
+
+getpokemon(){
+  let pokemonData;
+  for(let i = 1; i <= 30; i++){
+  this.servicepokemon.getPokemon(i).subscribe(response=>{ 
+    console.log(response)  
+    pokemonData= {
+      position: i,
+      name: response.name,
+      image: response.sprites.front_default
+    };
+      this.data.push(pokemonData)
+      this.lst =  new MatTableDataSource(this.data);
+      this.lst.paginator = this.paginator;
+      this.lst.sort = this.sort;
+      
+    },
+    err=>{
+      console.log("ERROR")
+    }  
+  )
+}
+
+}
+applyFilter(event: Event) {
+  const filterValue = (event.target as HTMLInputElement).value;
+  this.lst.filter = filterValue.trim().toLowerCase();
+
+  if (this.lst.paginator) {
+    this.lst.paginator.firstPage();
+  }
+}
+
+}
