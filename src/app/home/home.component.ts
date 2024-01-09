@@ -5,6 +5,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,12 +13,9 @@ import {MatCardModule} from '@angular/material/card';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  
-  lst!: MatTableDataSource<any>;
-  public columnas: string[] = [ 'position', 'name', 'image'];
-  data:any[]=[]
-  @ViewChild('MatPaginator') paginator!: MatPaginator;
-  @ViewChild(MatSort) sort!: MatSort;
+
+  data:any[]=[];
+
 constructor(public servicepokemon: PokemonServiceService) {
   this.getpokemon();
 }
@@ -37,10 +35,6 @@ getpokemon(){
       types: types
     };
       this.data.push(pokemonData)
-      this.lst =  new MatTableDataSource(this.data);
-      this.lst.paginator = this.paginator;
-      this.lst.sort = this.sort;
-      
     },
     err=>{
       console.log("ERROR")
@@ -48,13 +42,5 @@ getpokemon(){
   )
 }
 
-}
-applyFilter(event: Event) {
-  const filterValue = (event.target as HTMLInputElement).value;
-  this.lst.filter = filterValue.trim().toLowerCase();
-
-  if (this.lst.paginator) {
-    this.lst.paginator.firstPage();
-  }
 }
 }
