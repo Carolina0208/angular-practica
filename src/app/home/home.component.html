@@ -12,41 +12,59 @@
         </nav>
         <a href="#" class="btn"><button>Contacto</button></a>
     </header>
+    <div class="table-container">
+        <mat-form-field>
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+          </mat-form-field>
+          
+          <table mat-table [dataSource]="lst" class="mat-elevation-z8">
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> No. </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="image">
+              <th mat-header-cell *matHeaderCellDef> image </th>
+              <td mat-cell *matCellDef="let element"> <img src="{{element.image}}" alt="" width="100" height="100"> </td>
+            </ng-container>
+          
+            
+            <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+            <tr mat-row *matRowDef="let row; columns: columnas"></tr>
+          </table>
 
-    <mat-form-field>
-        <mat-label>Filter</mat-label>
-        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
-      </mat-form-field>
-      
-      <table mat-table [dataSource]="lst" class="mat-elevation-z8">
-      
-        <!-- Position Column -->
-        <ng-container matColumnDef="position">
-          <th mat-header-cell *matHeaderCellDef> No. </th>
-          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-        </ng-container>
-      
-        <!-- Name Column -->
-        <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef> Name </th>
-          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-        </ng-container>
-      
-        <!-- Weight Column -->
-        <ng-container matColumnDef="image">
-          <th mat-header-cell *matHeaderCellDef> image </th>
-          <td mat-cell *matCellDef="let element"> <img src="{{element.image}}" alt="" width="100" height="100"> </td>
-        </ng-container>
-      
-        
-        <tr mat-header-row *matHeaderRowDef="columnas"></tr>
-        <tr mat-row *matRowDef="let row; columns: columnas"></tr>
-      </table>
-      <mat-paginator #MatPaginator="matPaginator" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
-
-
-    <div *ngFor="let element of data">
-        <img src="{{element.image}}" alt="" width="100" height="100">
+          <mat-paginator #MatPaginator="matPaginator" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+    </div>
+    
+    <div class="pokemon-container">
+      <mat-card class="pokemon" *ngFor="let element of data">
+        <mat-card-header>
+          <div mat-card-avatar class="pokemon-image">
+            <img src="{{element.image2}}" alt="Pokemon Image" class="avatar-img">
+          </div>
+          <mat-card-title class="avatar-title">{{element.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{element.image}}" alt="Photo">
+        <mat-card-content>
+            <ul *ngFor="let type of element.types">
+                <li>{{element.types}}</li>
+            </ul>
+        </mat-card-content>
+        <mat-card-actions>
+          <button>LIKE</button>
+          <button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
     </div>
 
 <footer>
