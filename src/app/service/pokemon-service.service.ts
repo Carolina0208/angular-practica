@@ -15,6 +15,7 @@ export class PokemonServiceService {
 
 getPokemon(id:number){
   return this.http.get<any>(`${this.url}/pokemon/${id}`)
+  
 }
 
 }
