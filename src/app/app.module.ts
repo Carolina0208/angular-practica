@@ -6,7 +6,6 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
-import { MatCardModule } from '@angular/material/card';
 import { TablaPokemonesComponent } from './tabla-pokemones/tabla-pokemones.component';
 
 @NgModule({
@@ -20,8 +19,7 @@ import { TablaPokemonesComponent } from './tabla-pokemones/tabla-pokemones.compo
     AppRoutingModule,        
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule,
-    MatCardModule,
+    HttpClientModule,   
    ],
   providers: [],
   bootstrap: [AppComponent]

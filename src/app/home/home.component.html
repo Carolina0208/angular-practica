@@ -12,12 +12,12 @@
         <img mat-card-image src="{{element.image}}" alt="Photo">
         <mat-card-content>
             <ul *ngFor="let type of element.types">
-                <li>{{element.types}}</li>
+                <li>{{type}}</li>
             </ul>
         </mat-card-content>
         <mat-card-actions>
-          <button>LIKE</button>
-          <button>SHARE</button>
+          <button mat-raised-button color="primary">VIEW</button>
+          <button mat-raised-button color="accent">SHARE</button>
         </mat-card-actions>
       </mat-card>
     </div>

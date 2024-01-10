@@ -24,7 +24,7 @@ export class TablaPokemonesComponent {
 
   getpokemon() {
     let pokemonData;
-    for (let i = 1; i <= 30; i++) {
+    for (let i = 30; i <= 60; i++) {
       this.servicepokemon.getPokemon(i).subscribe(response => {
         console.log(response)
         const types: string[] = response.types.map((type: any) => type.type.name);
