@@ -1,42 +1,23 @@
-    <header class="header">
-        <div class="logo">
-            <img src="../assets/209777739-lobo-ilustración-cómica-dibujada-a-mano-lobo-lindo-vector-ilustración-de-dibujos-animados-estilo.jpg">
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Información</a></li>
-                <li><a href="#">Inicio de sesión</a></li>
-                <li><a href="#">Registro</a></li>
+    
+    
+    
+    <div class="pokemon-container">
+      <mat-card class="pokemon" *ngFor="let element of data">
+        <mat-card-header>
+          <div mat-card-avatar class="pokemon-image">
+            <img src="{{element.image2}}" alt="Pokemon Image" class="avatar-img">
+          </div>
+          <mat-card-title class="avatar-title">{{element.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{element.image}}" alt="Photo">
+        <mat-card-content>
+            <ul *ngFor="let type of element.types">
+                <li>{{type}}</li>
             </ul>
-        </nav>
-        <a href="#" class="btn"><button>Contacto</button></a>
-    </header>
-
-
-<footer>
-    <div class="info-restaurante">
-        <div class="columna1">
-        <span class="tit-pie">Restaurante</span>
-        <p><strong>Email principal:</strong> yeferguzman11@gmail.com</p>
-        <p><strong>Dirección principal:</strong> Cr14a #5-12</p>
-        <p><strong>Teléfono celular:</strong> 3223890477</p>        
-        </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary">VIEW</button>
+          <button mat-raised-button color="accent">SHARE</button>
+        </mat-card-actions>
+      </mat-card>
     </div>
-
-
-    <div class="info-sede">
-        <div class="columna2">
-        <span class="tit-pie">Sede</span>
-        <p><strong>Email principal:</strong> yeferguzman11@gmail.com</p>
-        <p><strong>Dirección principal:</strong> Cr14a #5-12</p>
-        <p><strong>Teléfono celular:</strong> 3223890477</p>    
-        </div>
-    </div>
-
-    <div class="redes-sociales">
-        <a href="https://github.com/Carolina0208/angular-practica"><i class="fab fa-facebook"></i></a>
-        <a href="https://github.com/Carolina0208/angular-practica"><i class="fab fa-instagram"></i></a>
-        <a href="https://github.com/Carolina0208/angular-practica"><i class="fab fa-tiktok"></i></a>
-    </div>
-</footer>

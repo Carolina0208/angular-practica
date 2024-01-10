@@ -1,27 +1,28 @@
-# AngularPractica
+# Proyecto Angular Practica
+La Aplicación de Práctica en Angular es un proyecto web desarrollado con el propósito de mejorar y practicar habilidades en Angular. Esta aplicación sirve como un espacio interactivo para experimentar con conceptos de Angular, mejorar la destreza en la codificación y explorar las mejores prácticas en el desarrollo web.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
 
-## Development server
+![](http://localhost:4200/assets/209777739-lobo-ilustraci%C3%B3n-c%C3%B3mica-dibujada-a-mano-lobo-lindo-vector-ilustraci%C3%B3n-de-dibujos-animados-estilo.jpg)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
 
-## Code scaffolding
+##Características
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Se creó para explorar y aplicar conceptos de Angular y github.
+* Se le irán añadiendo funcionalidades de forma incremental para mejorar la comprensión.
+* Con esta aplicación se practica la creación de interfaces adaptables y atractivas.
 
-## Build
+##Contribución
+Este proyecto está diseñado como un espacio personal de práctica y no está abierto a contribuciones externas.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+##Licencia
+Este proyecto se comparte bajo [Tipo de licencia]
 
-## Running unit tests
+##Estructura del proyecto
+Carpeta/Archivo  | Descripción
+------------- | -------------
+src/  | Código fuente
+dist/  | Archivos compilados
+angular.json | Configuración de Angular
+README.md | Documentación del proyecto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
