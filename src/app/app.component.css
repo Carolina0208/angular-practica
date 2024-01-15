@@ -1,6 +1,6 @@
 
 .header{
-    background-color: #52489C;;
+    background-color: #1c183b;
     display: flex;
     justify-content: space-between;
     align-self: center;
@@ -10,7 +10,7 @@
 }
 
 .header .logo img{
-    height: 70px;
+    height: 50px;
     width: auto;
     transition: 0.3s;
 }
@@ -24,7 +24,7 @@
 }
 
 .header .nav-links{
-    list-style: none;
+  align-items: center;
 }
 
 .header .nav-links li{
@@ -63,8 +63,13 @@ color: rgb(67, 61, 82);
 transform: scale(1.1);
 }
 
+.botonAngular {
+  background-color: yellow;
+  color: black;
+}
+
 footer {
-    background-color: #52489C;
+    background-color: #1c183b;
     padding: 30px;
     font-size: 14px;
   }
@@ -73,14 +78,14 @@ footer {
     width: 50%;
     float: left;
     text-align: left;
-
+    color: #ffffff;
   }
   
   .columna2 {
     width: 50%;
     float: right;
     text-align: right;
-
+    color: #ffffff;
   }
   
   .redes-sociales {
@@ -93,7 +98,7 @@ footer {
     margin: 0 10px;
     font-size: 20px;
     text-decoration: none;
-    color: #0D160B;
+    color: #ffffff;
   }
   
   .tit-pie {

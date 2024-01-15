@@ -37,9 +37,9 @@ getpokemon(){
       name: response.name,
       image: response.sprites.front_default,
       image2: response.sprites.back_default,
-      abilities: response.abilities,
       types: types
     };
+    
       this.data.push(pokemonData)
     },
     err=>{
@@ -53,7 +53,7 @@ getpokemon(){
 open(id:any){
   const dialogref = this.dialog.open(DialogPokemonComponent,{
     data: id,
-    width: '50%',
+    width: '30%',
   
   })  
   dialogref.afterClosed().subscribe(resul=>{

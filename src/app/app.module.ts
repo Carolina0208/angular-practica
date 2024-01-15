@@ -8,6 +8,7 @@ import { MaterialModule } from 'src/shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TablaPokemonesComponent } from './tabla-pokemones/tabla-pokemones.component';
 import { DialogPokemonComponent } from './home/dialog/dialogPokemon';
+import { DialogAbilitiesComponent } from './home/dialogAbilities/dialogAbilities';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { DialogPokemonComponent } from './home/dialog/dialogPokemon';
     HomeComponent,
     TablaPokemonesComponent,
     DialogPokemonComponent,
+    DialogAbilitiesComponent,
   ],
   imports: [
     BrowserModule,

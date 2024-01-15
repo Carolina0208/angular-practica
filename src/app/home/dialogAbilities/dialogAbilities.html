@@ -1,0 +1,12 @@
+
+<div *ngFor="let ability of lst">
+    <h2>{{ ability.name }}</h2>
+    <ul>
+      <li *ngFor="let entry of ability.effect_entries">
+        {{ entry.effect }}
+      </li>
+    </ul>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button (click)="cerrar()">Cancelar</button>
+</div>
