@@ -1,16 +1,15 @@
 <header class="header">
     <div class="logo">
-        <img src="../assets/209777739-lobo-ilustración-cómica-dibujada-a-mano-lobo-lindo-vector-ilustración-de-dibujos-animados-estilo.jpg">
+        <img src="../assets/Pokebola-pokeball-png-0.png">
     </div>
     <nav>
         <ul class="nav-links">
-            <li><button (click)="rutaHome()">Home</button></li>
-            <li><button (click)="rutaTabla()">Más Pokemones</button></li>
-            <li><button href="#">Inicio de sesión</button></li>
-            <li><button href="#">Registro</button></li>
+            <li><button mat-raised-button color="warn" (click)="rutaHome()">Home</button></li>
+            <li><button mat-raised-button color="warn" (click)="rutaTabla()">Más Pokemones</button></li>
+            <li><button mat-raised-button color="warn" href="#">Star Wars</button></li>
+            <li><button mat-raised-button color="warn" href="#">Registro</button></li>
         </ul>
     </nav>
-    <a href="#" class="btn"><button>Contacto</button></a>
 </header>
 
 <router-outlet></router-outlet>
